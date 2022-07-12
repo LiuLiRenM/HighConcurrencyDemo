@@ -120,11 +120,37 @@ public class UseBuffer {
         commonLog(intBuffer, "------------after rewind-----------");
     }
 
+    /**
+     * mark()方法和reset()方法测试 --> 将从标记处重新开始读取数据
+     *
+     * @author LiuYaoWen
+     * @date 2022/7/12 23:08
+     */
+    public static void markAndResetTest() {
+        // 准备测试数据
+        putTest();
+        int loop = 5;
+        intBuffer.flip();
+        // 读取全部数据
+        for (int i = 0; i < loop; i++) {
+            if (i == 2) {
+                // 在第三个数处标记一下，此时mark=2
+                intBuffer.mark();
+            }
+            logger.info("Buffer data: " + intBuffer.get());
+        }
+        commonLog(intBuffer, "------after read------");
+        // 将mark字段值赋值给position字段，reset之前，position为5，reset之后，position为2
+        intBuffer.reset();
+        commonLog(intBuffer, "-------after reset----------");
+    }
+
     public static void main(String[] args) {
 //        allocateTest();
 //        putTest();
 //        flipTest();
 //        getTest();
-        rewindTest();
+//        rewindTest();
+        markAndResetTest();
     }
 }
