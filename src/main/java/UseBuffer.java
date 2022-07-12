@@ -145,12 +145,40 @@ public class UseBuffer {
         commonLog(intBuffer, "-------after reset----------");
     }
 
+    /**
+     * clear()方法测试 --> 将缓冲区切换为写模式
+     *
+     * @author LiuYaoWen
+     * @date 2022/7/12 23:22
+     */
+    public static void clearTest() {
+        getTest();
+        intBuffer.clear();
+        commonLog(intBuffer, "-----after clear-------");
+    }
+
+    /**
+     * compact()方法测试 --> 将未读的数据复制到起始处，position从未读数据后一个开始，limit设置为capacity
+     * 和clear的区别在于：clear会直接将position设置为0，相当于清空了数据（实际上数据还在，只是写入的时候会覆盖掉），
+     * 而compact会先将未读数据复制到起始处，position会从最后一个未读数据后一个开始
+     *
+     * @author LiuYaoWen
+     * @date 2022/7/12 23:26
+     */
+    public static void compactTest() {
+        getTest();
+        intBuffer.compact();
+        commonLog(intBuffer, "-------after compact-------");
+    }
+
     public static void main(String[] args) {
 //        allocateTest();
 //        putTest();
 //        flipTest();
 //        getTest();
 //        rewindTest();
-        markAndResetTest();
+//        markAndResetTest();
+//        clearTest();
+        compactTest();
     }
 }
