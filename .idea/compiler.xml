@@ -9,5 +9,8 @@
         <module name="HighConcurrencyDemo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="crazyCircleDemos" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
