@@ -1,3 +1,5 @@
+package com.lyw.nio;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class NioSendClient {
 
-    static Logger logger = Logger.getLogger("NioSendClient");
+    static Logger logger = Logger.getLogger("com.lyw.nio.NioSendClient");
 
     private final Charset charset = StandardCharsets.UTF_8;
 

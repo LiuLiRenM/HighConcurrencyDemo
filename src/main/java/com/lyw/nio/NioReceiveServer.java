@@ -1,3 +1,5 @@
+package com.lyw.nio;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -27,7 +29,7 @@ public class NioReceiveServer {
 
     private final Charset charset = StandardCharsets.UTF_8;
 
-    static Logger logger = Logger.getLogger("NioReceiveServer");
+    static Logger logger = Logger.getLogger("com.lyw.nio.NioReceiveServer");
 
     /**
      * 服务端保存的客户端对象，对应一个客户端文件
