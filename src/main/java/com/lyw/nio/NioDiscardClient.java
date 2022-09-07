@@ -1,3 +1,5 @@
+package com.lyw.nio;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -12,7 +14,7 @@ import java.util.logging.Logger;
  */
 public class NioDiscardClient {
 
-    static Logger logger = Logger.getLogger("NioDiscardClient");
+    static Logger logger = Logger.getLogger("com.lyw.nio.NioDiscardClient");
 
     public static void startClient() throws IOException {
         InetSocketAddress address = new InetSocketAddress("127.0.0.1", 18899);

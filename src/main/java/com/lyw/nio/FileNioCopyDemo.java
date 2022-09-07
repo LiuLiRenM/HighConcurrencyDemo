@@ -1,3 +1,5 @@
+package com.lyw.nio;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -15,7 +17,7 @@ import java.util.logging.Logger;
  */
 public class FileNioCopyDemo {
 
-    static Logger logger = Logger.getLogger("FileNioCopyDemo");
+    static Logger logger = Logger.getLogger("com.lyw.nio.FileNioCopyDemo");
 
     public static void nioCopyResourceFile() throws IOException {
         String srcPath = "E:\\NIOTest\\1.txt";

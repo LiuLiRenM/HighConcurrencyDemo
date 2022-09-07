@@ -1,3 +1,5 @@
+package com.lyw.nio;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -16,7 +18,7 @@ import java.util.logging.Logger;
  */
 public class NioDiscardServer {
 
-    static Logger logger = Logger.getLogger("NioDiscardServer");
+    static Logger logger = Logger.getLogger("com.lyw.nio.NioDiscardServer");
 
     public static void startServer() throws IOException {
         // 获取选择器

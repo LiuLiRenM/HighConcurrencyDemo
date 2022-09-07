@@ -1,3 +1,5 @@
+package com.lyw.nio;
+
 import java.nio.IntBuffer;
 import java.util.logging.Logger;
 
@@ -14,7 +16,7 @@ public class UseBuffer {
      */
     static IntBuffer intBuffer = null;
 
-    static Logger logger = Logger.getLogger("UseBuffer");
+    static Logger logger = Logger.getLogger("com.lyw.nio.UseBuffer");
 
     /**
      * allocate()方法测试 --> 创建对应的实例对象
